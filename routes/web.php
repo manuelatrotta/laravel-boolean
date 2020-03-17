@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// static page
+Route::get('/', 'StaticPageController@index') -> name('static_page.home');
+Route::get('/', 'StaticPageController@privacy') -> name('static_page.privacy');
+Route::get('/', 'StaticPageController@faq') -> name('static_page.faq');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//studenti
+Route::get('/students', 'StudentController@index') -> name('student.index');
+Route::get('/students/show/(id)', 'StudentController@index') -> name('student.show');
