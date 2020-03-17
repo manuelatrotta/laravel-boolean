@@ -8,12 +8,10 @@
     <div class="container">
       <nav>
         <ul>
-          <li></li>
-            <a href="{{route('static_page.home')}}">Home</a>
-            <a href="#">Corso</a>
-            <a href="#">Dopo Corso</a>
-            <a href="#">Lezione Gratuita</a>
-            <a href="#">Candidati Ora</a>
-          <li></li>
+          <li><a href="{{route('static_page.home')}}">Home</a></li>
+          <li><a href="#">Corso</a></li>
+          <li><a href="#">Dopo Corso</a></li>
+          <li><a href="#">Lezione Gratuita</a></li>
+          <li><a href="#">Candidati Ora</a></li>
         </ul>
       </nav>
