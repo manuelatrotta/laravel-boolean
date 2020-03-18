@@ -1,1 +1,84 @@
-//
+//mixin clearfix
+@mixin clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//nav-header
+.navbar {
+  height: 100px;
+  color: white;
+  background-color: blue;
+  @include clearfix;
+  .logo {
+    padding: 0 0 0 10px;
+    line-height: 90px;
+    float: left;
+  }
+
+  //list
+  ul {
+    float: right;
+    list-style: none;
+    text-align: right;
+    li {
+      display: inline-block;
+      margin: 0 30px;
+      line-height: 90px;
+      a {
+        color: white;
+        text-decoration: none;
+        &.active{
+          color: red;
+        }
+      }
+    }
+  }
+}
+//nav-footer
+.nav-footer {
+  background-color: grey;
+  height: 100px;
+  @include clearfix;
+  ul {
+    float: right;
+    list-style: none;
+    text-align: right;
+    a {
+      color: white;
+    }
+  }
+}
+//students
+.students {
+  display: flex;
+  flex-wrap: wrap;
+  .student {
+    width: calc(100% / 2 - 20px);
+    margin: 20px 10px;
+    padding: 20px;
+    background-color: lightgrey;
+    .info {
+      @include clearfix();
+
+      img, .text {
+        float: left;
+      }
+      img {
+        width: 90px;
+        margin-right: 10px;
+      }
+      .text {
+        width: calc(100% - 100px );
+      }
+    }
+  }
+}
