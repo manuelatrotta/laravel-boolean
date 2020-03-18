@@ -26,7 +26,7 @@ class StudentController extends Controller
     }
 
     private function getAllStudents()  {
-      //array students inserito in config students.php
+      //array students inserito in config students.php nome filephp,nome chiave
       $this->students = config('students.students');
       // dd($this->students);
     }
