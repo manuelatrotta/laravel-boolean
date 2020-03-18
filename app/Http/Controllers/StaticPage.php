@@ -4,30 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class StudentController extends Controller
+class StaticPageController extends Controller
 {
-   private $students;
-
-    public function __construct()
-    {
-      $this->getAllStudents();
-    }
     //
     public function index()
     {
-      // $students = $this->students;
-      // return view('students.index', compact('students'));
-      return view('students.index');
+
+        // $pincoPallo = (isset($pinco)) ? 'pinco' : 'pallo';
+        return view('staticpages.index');
     }
 
-    public function show($id)
+    public function privacy()
     {
-
+        return view('staticpages.privacy');
     }
 
-    private function getAllStudents()  {
-      //array students inserito in config students.php nome filephp,nome chiave
-      $this->students = config('students.students');
-      // dd($this->students);
+    public function faq()
+    {
+        return view('staticpages.faq');
     }
 }
