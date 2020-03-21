@@ -6,11 +6,8 @@ use Illuminate\Http\Request;
 
 class StaticPageController extends Controller
 {
-    //
     public function index()
     {
-
-        // $pincoPallo = (isset($pinco)) ? 'pinco' : 'pallo';
         return view('staticpages.index');
     }
 
