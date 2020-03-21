@@ -1,14 +1,20 @@
-    @include('layouts.partials._header')
-      <header>
-        @yield('header')
+@include('partials._head')
+  {{-- wrapper --}}
+  <div class="wrapper">
+    {{-- header  --}}
+    @include('partials._header')
+    {{-- nav --}}
+    {{-- jumbo --}}
+    <div class="jumbo container-fluid">
+      @yield('jumbo')
+    </div>
 
-      </header>
-      <main>
-        @yield('main')
-      </main>
-      <footer>
-        @yield('footer')
-
-      </footer>
-      @yield('scripts')
-    @include('layouts.partials._footer')
+    {{-- main --}}
+    <main class="container">
+      @yield('main')
+    </main>
+    {{-- footer --}}
+    @include('partials._footer-menu')
+  </div>
+  @yield('scripts')
+@include('partials._footer')
