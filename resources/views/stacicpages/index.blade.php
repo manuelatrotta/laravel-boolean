@@ -1,4 +1,3 @@
-
 @extends('layouts.layout')
 @section('jumbo')
       <div class="row">
@@ -25,4 +24,15 @@
           </div>
         </div>
       </div>
+@endsection
+
+@section('main')
+     <div class="row">
+        <div class="col-12">
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit similique quam explicabo omnis officia id delectus provident aspernatur, corporis nam unde, vero eaque? Sequi numquam cupiditate, ullam aut natus illo?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit similique quam explicabo omnis officia id delectus provident aspernatur, corporis nam unde, vero eaque? Sequi numquam cupiditate, ullam aut natus illo?</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit similique quam explicabo omnis officia id delectus provident aspernatur, corporis nam unde, vero eaque? Sequi numquam cupiditate, ullam aut natus illo?</p>
+        </div>
+      </div>
+
 @endsection
